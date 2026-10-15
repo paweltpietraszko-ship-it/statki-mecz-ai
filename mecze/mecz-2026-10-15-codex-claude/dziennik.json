@@ -1,0 +1,2877 @@
+{
+ "format": "statki-pokaz-1",
+ "matchId": "a406cc3a-eb75-4920-9424-020bcb23031f",
+ "players": [
+  "codex",
+  "claude"
+ ],
+ "sinceRevision": [
+  170,
+  171
+ ],
+ "decision": null,
+ "gaveUp": null,
+ "pausedByCoordinator": false,
+ "stopRequested": null,
+ "totals": {
+  "calls": [
+   86,
+   90
+  ],
+  "lost": [
+   0,
+   0
+  ],
+  "tokens": [
+   {
+    "in": 819808,
+    "out": 31845
+   },
+   {
+    "in": 696649,
+    "out": 66717
+   }
+  ],
+  "misses": [
+   0,
+   0
+  ],
+  "retries": [
+   0,
+   5
+  ]
+ },
+ "models": [
+  "gpt-6.1-sol",
+  "claude-opus-5-5"
+ ],
+ "sessions": [
+  {
+   "start": "2026-10-15T13:29:29.421Z",
+   "end": "2026-10-15T14:37:29.867Z",
+   "reason": "Koniec partii: wygrywa gracz 1.",
+   "calls": 176
+  }
+ ],
+ "log": [
+  {
+   "player": 0,
+   "kind": "setup",
+   "revision": 0,
+   "attempts": 1,
+   "action": {
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "x": 1,
+      "y": 2,
+      "horiz": false
+     },
+     {
+      "id": "pancernik-1",
+      "x": 8,
+      "y": 1,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1
+      }
+     },
+     {
+      "id": "podwodny-1",
+      "x": 10,
+      "y": 9,
+      "horiz": false,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "niszczyciel-1",
+      "x": 3,
+      "y": 11,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "okret-1",
+      "x": 6,
+      "y": 5,
+      "horiz": false,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1
+      }
+     }
+    ],
+    "loadout": {
+     "sonar": 1,
+     "zwiad": 1,
+     "torpeda": 2,
+     "nalot": 1
+    }
+   },
+   "comment": "Rozpraszam flotę, pozostawiając miejsce na patrol. Sonar i zwiad pomogą znaleźć cel dla dwóch torped.",
+   "raw": [
+    "0001-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "setup",
+   "revision": 1,
+   "attempts": 1,
+   "action": {
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "x": 1,
+      "y": 1,
+      "horiz": true
+     },
+     {
+      "id": "pancernik-1",
+      "x": 9,
+      "y": 2,
+      "horiz": false,
+      "pattern": {
+       "kind": "skraj",
+       "along": 1,
+       "across": 1
+      }
+     },
+     {
+      "id": "podwodny-1",
+      "x": 2,
+      "y": 8,
+      "horiz": true,
+      "pattern": {
+       "kind": "zygzak",
+       "along": 1,
+       "across": 1
+      }
+     },
+     {
+      "id": "niszczyciel-1",
+      "x": 10,
+      "y": 10,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "okret-1",
+      "x": 6,
+      "y": 10,
+      "horiz": false,
+      "pattern": {
+       "kind": "skraj",
+       "along": -1,
+       "across": -1
+      }
+     }
+    ],
+    "loadout": {
+     "salwa": 1,
+     "torpeda": 1,
+     "sonar": 1,
+     "manewr": 1,
+     "dym": 1
+    }
+   },
+   "comment": "Rozpraszam flotę po całej planszy, żeby jeden sonar czy nalot nie odkrył kilku okrętów naraz. Każdy okręt patroluje innym wzorem. Zestaw: salwa, torpeda, sonar, manewr i dym.",
+   "raw": [
+    "0002-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 2,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 4,
+    "y": 4
+   },
+   "comment": "Sprawdzam centralny obszar 5×5, szukając skupiska okrętów przed zwiadem i ostrzałem.",
+   "raw": [
+    "0003-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 3,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Sonar obejmuje tylko mój okręt podwodny, a sonar i tak go nie widzi. Wynik będzie 0 bez żadnej reakcji, więc zostawiam dym na później.",
+   "raw": [
+    "0004-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 4,
+   "attempts": 1,
+   "action": {
+    "type": "zwiad",
+    "x": 9,
+    "y": 3
+   },
+   "comment": "Sprawdzam prawą część planszy zwiadem, aby znaleźć cel do natychmiastowego trafienia.",
+   "raw": [
+    "0005-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 5,
+   "attempts": 1,
+   "action": {
+    "reaction": {
+     "type": "dym",
+     "shipId": "pancernik-1"
+    }
+   },
+   "comment": "Zwiad wroga obejmuje 3 segmenty pancernika. Stawiam dym: zwiad nic nie znajdzie. Manewr zostawiam na salwę albo torpedę.",
+   "raw": [
+    "0006-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 6,
+   "attempts": 1,
+   "action": {
+    "type": "nalot",
+    "x": 2,
+    "y": 8
+   },
+   "comment": "Przeszukuję nalotem obszar poza pustymi strefami rozpoznania, aby znaleźć i unieruchomić pierwszy okręt.",
+   "raw": [
+    "0007-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 7,
+   "attempts": 1,
+   "action": {
+    "reaction": {
+     "type": "manewr",
+     "shipId": "podwodny-1",
+     "dx": 0,
+     "dy": -2
+    }
+   },
+   "comment": "Nalot celuje w obszar z moim okrętem podwodnym, więc trafienie byłoby pewne. Manewruję o 2 pola w górę, na (3-5,6), poza obszar ataku. Ten rejon przeciwnik sprawdził już sonarem i dostał 0.",
+   "raw": [
+    "0008-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 8,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 4,
+    "y": 4
+   },
+   "comment": "Zaczynam rozpoznanie od sonaru na środku planszy przeciwnika (x4-8, y4-8). Wynik pomoże wybrać cel pierwszego strzału.",
+   "raw": [
+    "0009-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 9,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Brak dostępnej obrony przed sonarem; zachowuję pozostałe ładunki.",
+   "raw": [
+    "0010-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 10,
+   "attempts": 1,
+   "action": {
+    "type": "torpeda",
+    "x": 4,
+    "y": 6,
+    "horiz": true
+   },
+   "comment": "Sonar wykrył 3 segmenty w obszarze x4-8, y4-8. Puszczam torpedę środkowym wierszem tego obszaru (y6, x4-8). Pokrywa 5 pól, a jeśli trafi okręt, uderza we wszystkie jego segmenty na linii.",
+   "raw": [
+    "0011-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 11,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Brak dostępnej obrony przed torpedą; zachowuję pozostałe ładunki.",
+   "raw": [
+    "0012-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 12,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 8
+   },
+   "comment": "Sprawdzam prawy dolny sektor sonarem, by lepiej wycelować pozostałe torpedy.",
+   "raw": [
+    "0013-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 13,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam już ładunków reakcji (dym i manewr zużyte), więc sonar przeciwnika przechodzi bez obrony. Wykryje mój niszczyciel w tym obszarze.",
+   "raw": [
+    "0014-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 14,
+   "attempts": 1,
+   "action": {
+    "type": "torpeda",
+    "x": 8,
+    "y": 10,
+    "horiz": true
+   },
+   "comment": "Sonar wykrył trzy segmenty w prawym dolnym sektorze. Torpeda przez środek obszaru może trafić i unieruchomić okręt, a przy dobrym ustawieniu zatopić go od razu.",
+   "raw": [
+    "0015-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 15,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam reakcji. Na linii (8..12,10) nie stoi żaden mój okręt, więc torpeda powinna przejść pusto.",
+   "raw": [
+    "0016-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 16,
+   "attempts": 1,
+   "action": {
+    "type": "salwa",
+    "x": 7,
+    "y": 6,
+    "omit": "tl"
+   },
+   "comment": "Salwa wokół trafienia (7,6): strzelam w (8,6), (7,7) i (8,7). Sprawdzam jednocześnie przedłużenie w prawo i w dół, bo pole na lewo od trafienia to pudło.",
+   "raw": [
+    "0017-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 17,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Brak dostępnej obrony; zachowuję pozostałą torpedę.",
+   "raw": [
+    "0018-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 18,
+   "attempts": 1,
+   "action": {
+    "type": "torpeda",
+    "x": 10,
+    "y": 8,
+    "horiz": false
+   },
+   "comment": "Pionowa torpeda przeczesze obszar ostatniego dodatniego sonaru i może trafić kilka segmentów naraz.",
+   "raw": [
+    "0019-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 19,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam żadnej reakcji. Torpeda w kolumnie x10 trafi zapewne niszczyciel w (10,9), stracę jeden segment.",
+   "raw": [
+    "0020-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 20,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 8
+   },
+   "comment": "Dobijam okręt stojący pionowo w kolumnie 7. Pudła po bokach wykluczają lotniskowiec, więc to okręt o szerokości 1. Strzelam w dół, w (7,8).",
+   "raw": [
+    "0021-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 21,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 9
+   },
+   "comment": "Sprawdzam pole na lewo od trafienia; pojedyncze trafienie pionową torpedą sugeruje poziomy okręt.",
+   "raw": [
+    "0022-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 22,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 5
+   },
+   "comment": "Dobijam okręt w kolumnie 7: trafienia (7,6) i (7,7), a pod nimi pudło (7,8). Kadłub musi więc ciągnąć się w górę, więc strzelam w (7,5).",
+   "raw": [
+    "0023-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 23,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 9
+   },
+   "comment": "Sprawdzam prawą stronę trafionego okrętu; lewy sąsiad i pole powyżej są puste.",
+   "raw": [
+    "0024-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 24,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 9,
+    "y": 9
+   },
+   "comment": "Okret-1 wroga zatopiony. Zostały lotniskowiec, pancernik, podwodny i niszczyciel, o których nic nie wiem. Ostatnim ładunkiem sonaru sprawdzam nieznany prawy dolny róg.",
+   "raw": [
+    "0025-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 25,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Bez reakcji. Okręt podwodny jest niewidoczny dla sonaru.",
+   "raw": [
+    "0026-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 26,
+   "attempts": 2,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 3
+   },
+   "comment": "Sonar w prawym dolnym rogu nic nie pokazał, więc przenoszę ostrzał na górny środek planszy. Szukam tam dużego lotniskowca.",
+   "raw": [
+    "0027-g1.json",
+    "0028-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 27,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 9
+   },
+   "comment": "Przedłużam linię dwóch trafień w prawo, by zatopić lub rozpoznać unieruchomiony okręt.",
+   "raw": [
+    "0029-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 28,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "nalot"
+   },
+   "comment": "Mój niszczyciel zatonął, więc sonaru nie kupię. Za punkt biorę nalot: obszar 3×3 da znacznie większą szansę trafienia niż pojedynczy strzał na ślepo.",
+   "raw": [
+    "0030-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 29,
+   "attempts": 1,
+   "action": {
+    "type": "nalot",
+    "x": 10,
+    "y": 2
+   },
+   "comment": "Używam nalotu na nieostrzelany obszar 3×3 od (10,2). Prawy górny rejon jest jeszcze nieznany, a jeśli trafię, okręt stanie w miejscu i będę go dobijał.",
+   "raw": [
+    "0031-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 30,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Brak dostępnej obrony przed nalotem na pancernik.",
+   "raw": [
+    "0032-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 31,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "sonar"
+   },
+   "comment": "Kupuję dwa ładunki sonaru za punkt. Pomogą znaleźć kolejny cel bez strzelania na ślepo.",
+   "raw": [
+    "0033-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 32,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 1,
+    "y": 1
+   },
+   "comment": "Przeszukuję sonarami północno-zachodni obszar, szukając przede wszystkim dużego lotniskowca.",
+   "raw": [
+    "0034-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 33,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam żadnych ładunków obronnych, więc sonar przeciwnika przechodzi bez reakcji. Zobaczy fragment mojego lotniskowca w lewym górnym rejonie.",
+   "raw": [
+    "0035-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 34,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 3
+   },
+   "comment": "Sonar wykrył 4 segmenty w obszarze (1–5,1–5). Strzelam w środek, by trafić i unieruchomić okręt.",
+   "raw": [
+    "0036-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 35,
+   "attempts": 2,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 4
+   },
+   "comment": "Dobijam okręt trafiony w (11,3). Jest unieruchomiony, więc sprawdzam sąsiednie pola. Zaczynam od (11,4).",
+   "raw": [
+    "0037-g1.json",
+    "0038-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 36,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 2
+   },
+   "comment": "Szukam okrętu w obszarze, gdzie ostatni sonar wykrył cztery segmenty. Omijam wcześniejsze pudło.",
+   "raw": [
+    "0039-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 37,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 2
+   },
+   "comment": "Dobijam trafiony okręt w (11,3): w dół było pudło, więc teraz sprawdzam pole nad trafieniem.",
+   "raw": [
+    "0040-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 38,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 2
+   },
+   "comment": "Sprawdzam pole obok trafienia (4,2), by ustalić kierunek unieruchomionego okrętu.",
+   "raw": [
+    "0041-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 39,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 3
+   },
+   "comment": "Pudła w (11,2) i (11,4) wokół trafienia (11,3), więc okręt leży poziomo w wierszu 3. To nie lotniskowiec, bo 5×2 zająłby jedno z tych pól. Dobijam w lewo: (10,3).",
+   "raw": [
+    "0042-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 40,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 2
+   },
+   "comment": "Kontynuuję ostrzał wzdłuż dwóch trafionych segmentów, aby ustalić długość i zatopić okręt.",
+   "raw": [
+    "0043-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 41,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 3
+   },
+   "comment": "Dobijam trafiony okręt w wierszu 3. Pudła nad i pod (11,3) wykluczają lotniskowiec, więc to okręt poziomy o długości 3–4. Teraz strzelam w lewo, w (9,3).",
+   "raw": [
+    "0044-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 42,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 2
+   },
+   "comment": "Kontynuuję ostrzał wzdłuż trzech trafień, szukając końca okrętu.",
+   "raw": [
+    "0045-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 43,
+   "attempts": 2,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 3
+   },
+   "comment": "Trafiłem (9,3), (10,3) i (11,3), a okręt wciąż pływa, więc ma 4 pola. Brakuje jednego segmentu: na (8,3) albo na (12,3). Strzelam w (8,3).",
+   "raw": [
+    "0046-g1.json",
+    "0047-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 44,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 3
+   },
+   "comment": "Cztery trafienia bez zatopienia sugerują lotniskowiec. Sprawdzam jego drugi rząd.",
+   "raw": [
+    "0048-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 45,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 9
+   },
+   "comment": "Pancernik i okret-1 wroga zatopione. Zostały lotniskowiec, podwodny i niszczyciel. Przeczesuję szachownicą duży, nieostrzelany lewy-dolny obszar.",
+   "raw": [
+    "0049-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 46,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 1
+   },
+   "comment": "Sprawdzam drugi rząd domniemanego lotniskowca nad pasmem czterech trafień.",
+   "raw": [
+    "0050-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 47,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 10
+   },
+   "comment": "Kontynuuję przeszukiwanie lewego dołu planszy szachownicą. Lotniskowiec przeciwnika zajmuje 10 pól, więc w tym dużym nieodkrytym obszarze szansa trafienia jest spora.",
+   "raw": [
+    "0051-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 48,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 1
+   },
+   "comment": "Sprawdzam górny rząd prawdopodobnego lotniskowca i kontynuuję dobijanie unieruchomionego celu.",
+   "raw": [
+    "0052-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 49,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "nalot"
+   },
+   "comment": "Kupuję nalot za jedyny punkt, póki mój lotniskowiec jeszcze żyje. Nalot w obszarze 3×3 ma dużo większą szansę na trafienie niż pojedynczy strzał.",
+   "raw": [
+    "0053-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 50,
+   "attempts": 1,
+   "action": {
+    "type": "nalot",
+    "x": 0,
+    "y": 4
+   },
+   "comment": "Zużywam nalot, póki mój lotniskowiec jeszcze żyje. Celuję w nieostrzelany lewy bok (x0-2, y4-6), gdzie może pływać wrogi lotniskowiec 5×2.",
+   "raw": [
+    "0054-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 51,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nalot omija nasze okręty; bez reakcji.",
+   "raw": [
+    "0055-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 52,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 1
+   },
+   "comment": "Sprawdzam pole nad trafieniem (4,2), aby potwierdzić obrys możliwego lotniskowca.",
+   "raw": [
+    "0056-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 53,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 11
+   },
+   "comment": "Bez ładunków strzelam szachownicą w lewy dół planszy. Ta część jest jeszcze nieostrzelana, a przeciwnikowi zostały lotniskowiec 5×2, podwodny i niszczyciel.",
+   "raw": [
+    "0057-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 54,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 1
+   },
+   "comment": "Sprawdzam (7,1), domykając prostokąt trafień i ustalając kształt unieruchomionych okrętów.",
+   "raw": [
+    "0058-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 55,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 11
+   },
+   "comment": "Strzelam w duży, nieostrzelany obszar w prawym dolnym rogu. Lotniskowiec 5×2 łatwo tam namierzyć siatką co drugie pole.",
+   "raw": [
+    "0059-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 56,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 1
+   },
+   "comment": "Sprawdzam prawy koniec trafionego prostokąta — możliwy ostatni słupek lotniskowca.",
+   "raw": [
+    "0060-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 57,
+   "attempts": 2,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 11
+   },
+   "comment": "Dobijam okręt trafiony w (10,11). Trafiony okręt stoi w miejscu, więc sprawdzam sąsiednie pola, zaczynając od (11,11).",
+   "raw": [
+    "0061-g1.json",
+    "0062-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 58,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 1
+   },
+   "comment": "Sprawdzam lewy koniec trafionego prostokąta; pudło po prawej wskazuje na lotniskowiec rozciągnięty w lewo.",
+   "raw": [
+    "0063-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 59,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 11
+   },
+   "comment": "Dobijam okręt trafiony w (10,11). Pole (11,11) okazało się pudłem, więc sprawdzam lewego sąsiada (9,11).",
+   "raw": [
+    "0064-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 60,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 2
+   },
+   "comment": "Strzelam w ostatnie pole przypuszczalnego lotniskowca, aby go zatopić.",
+   "raw": [
+    "0065-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 61,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 10
+   },
+   "comment": "Dobijam okręt trafiony w (10,11). Pola (9,11) i (11,11) to pudła, więc okręt leży pionowo. Sprawdzam pole nad trafieniem.",
+   "raw": [
+    "0066-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 62,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 0,
+    "y": 4
+   },
+   "comment": "Sprawdzam lewą część planszy, szukając pancernika lub krążownika przed zakupem uzbrojenia.",
+   "raw": [
+    "0067-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 63,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam żadnych ładunków reakcji, więc nie odpowiadam na sonar. Sonar nie widzi okrętu podwodnego, ale wykryje segment okret-1 na (4,8).",
+   "raw": [
+    "0068-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 64,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "zwiad"
+   },
+   "comment": "Sonar wykrył jeden segment przy granicy obszaru. Kupuję zwiad, żeby ustalić jego pozycję przed atakiem.",
+   "raw": [
+    "0069-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 65,
+   "attempts": 1,
+   "action": {
+    "type": "zwiad",
+    "x": 3,
+    "y": 3
+   },
+   "comment": "Sprawdzam granicę obszaru sonaru: pojedynczy segment sugeruje okręt wystający poza badany kwadrat.",
+   "raw": [
+    "0070-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 66,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam ładunków reakcji, więc brak obrony. Zwiad na (3..5,3..5) i tak raczej nic nie znajdzie, bo mój podwodny stoi w wierszu y6, tuż pod obszarem.",
+   "raw": [
+    "0071-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 67,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "nalot"
+   },
+   "comment": "Kupuję nalot, by przeszukać granicę obszaru, w którym sonar wykrył segment.",
+   "raw": [
+    "0072-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 68,
+   "attempts": 1,
+   "action": {
+    "type": "nalot",
+    "x": 3,
+    "y": 6
+   },
+   "comment": "Nalot przy granicy obszaru sonaru: próbuję trafić i unieruchomić wykryty okręt.",
+   "raw": [
+    "0073-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 69,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam ładunków reakcji, więc nalot na (3-5,6-8) przyjmuję bez obrony. Zagrożone są podwodny na y6 i okret-1 w (4,8).",
+   "raw": [
+    "0074-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 70,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 9
+   },
+   "comment": "Dobijam okręt w kolumnie x=10. Trafienia (10,10) i (10,11), a pudła na (9,11) i (11,11) wykluczają lotniskowiec 5×2, więc to statek długości 3. Strzelam w (10,9), w razie pudła zostaje (10,12).",
+   "raw": [
+    "0075-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 71,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 8
+   },
+   "comment": "Sprawdzam pole na prawo od trafienia, aby ustalić kierunek unieruchomionego okrętu.",
+   "raw": [
+    "0076-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 72,
+   "attempts": 2,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 12
+   },
+   "comment": "Szukam lotniskowca 5x2 i niszczyciela 3x1. Strzelam w szeroki, nieostrzelany pas na dole planszy.",
+   "raw": [
+    "0077-g1.json",
+    "0078-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 73,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 9
+   },
+   "comment": "Sprawdzam pole pod trafieniem (4,8), szukając pionowego okrętu.",
+   "raw": [
+    "0079-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 74,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 2
+   },
+   "comment": "Zostały lotniskowiec 5×2 i niszczyciel. Strzelam w środek dużego nieostrzelanego obszaru w lewym górnym rogu. Tam lotniskowiec 5×2 ma najwięcej możliwych ustawień.",
+   "raw": [
+    "0080-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 75,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 10
+   },
+   "comment": "Kontynuuję ostrzał wzdłuż dwóch trafień, próbując zatopić unieruchomiony okręt.",
+   "raw": [
+    "0081-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 76,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 2
+   },
+   "comment": "Trafiliśmy w (3,2) i ten okręt stoi teraz w miejscu. Dobijam go od sąsiednich pól. Najpierw strzelam w prawo, w (4,2), bo duży lotniskowiec 5×2 jest tu bardziej prawdopodobny.",
+   "raw": [
+    "0082-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 77,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "sonar"
+   },
+   "comment": "Kupuję dwa ładunki sonaru, by odnaleźć pozostały pancernik. Okręt podwodny jest niewidoczny dla sonaru.",
+   "raw": [
+    "0083-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 78,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 3
+   },
+   "comment": "Sprawdzam prawą środkową część planszy, szukając pozostałego pancernika.",
+   "raw": [
+    "0084-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 79,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam ładunków obronnych, więc brak reakcji. Sonar przeciwnika obejmuje mój pancernik.",
+   "raw": [
+    "0085-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 80,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 5
+   },
+   "comment": "Sonar wykrył trzy segmenty pancernika. Strzelam w środek obszaru, gdzie przecinają się najbardziej prawdopodobne ustawienia.",
+   "raw": [
+    "0086-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 81,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 2
+   },
+   "comment": "Dobijam okręt trafiony w (3,2). Pudło w (4,2) wyklucza poziomy lotniskowiec. Jeśli to lotniskowiec, stoi pionowo w kolumnach 2-3, więc (2,2) na pewno jest trafieniem. Pasuje też do poziomego niszczyciela x1-3.",
+   "raw": [
+    "0087-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 82,
+   "attempts": 1,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 5
+   },
+   "comment": "Sprawdzam dolną część rejonu ostatniego kontaktu, aby zawęzić pozycję pancernika przed strzałem.",
+   "raw": [
+    "0088-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 83,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nie mam ładunków obronnych, jedyna możliwa reakcja to brak reakcji. Sonar przeciwnika złapie fragment mojego pancernika w kolumnie 9.",
+   "raw": [
+    "0089-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 84,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 6
+   },
+   "comment": "Strzelam w przecięcie najbardziej prawdopodobnych pozycji pancernika po obu sonarach.",
+   "raw": [
+    "0090-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 85,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 3
+   },
+   "comment": "Dobijam okręt trafiony w (2,2) i (3,2). Pionowy lotniskowiec w kolumnach 2-3 zawsze obejmuje wiersz 3, więc (2,3) to najpewniejsze pole.",
+   "raw": [
+    "0091-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 86,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 5
+   },
+   "comment": "Sprawdzam pole nad trafieniem, aby ustalić kierunek unieruchomionego okrętu.",
+   "raw": [
+    "0092-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 87,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 3
+   },
+   "comment": "Trafienia (2,2), (3,2) i (2,3) tworzą literę L. Najpewniej to lotniskowiec ustawiony pionowo w kolumnach 2-3, więc dobijam pole (3,3) w środku tego układu.",
+   "raw": [
+    "0093-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 88,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 4
+   },
+   "comment": "Dwa trafienia wyznaczają pionowy okręt. Sprawdzam przedłużenie na północ, zgodnie ze wskazaniami sonaru.",
+   "raw": [
+    "0094-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 89,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 4
+   },
+   "comment": "Kwadrat 2×2 trafień w (2-3,2-3) wskazuje na pionowy lotniskowiec w kolumnach 2-3. Pudło w (4,2) wyklucza wariant poziomy, więc szukam jego końca: strzelam w (2,4).",
+   "raw": [
+    "0095-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 90,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 3
+   },
+   "comment": "Sprawdzam północny koniec trafionego okrętu; sonary wskazują na pancernik.",
+   "raw": [
+    "0096-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 91,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 4
+   },
+   "comment": "Trafienie w (2,4) potwierdza pionowy lotniskowiec w kolumnach 2-3. Pole (3,4) należy do niego w każdym możliwym ułożeniu, więc to pewny strzał.",
+   "raw": [
+    "0097-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 92,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "nalot"
+   },
+   "comment": "Kupuję nalot: przeciw ostatniemu, niewidocznemu dla sonaru okrętowi podwodnemu przeszuka jednocześnie dziewięć pól.",
+   "raw": [
+    "0098-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 93,
+   "attempts": 1,
+   "action": {
+    "type": "nalot",
+    "x": 6,
+    "y": 10
+   },
+   "comment": "Przeszukuję nalotem nieostrzelany obszar, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0099-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "reaction",
+   "revision": 94,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Nalot spada na (6-8, 10-12), a mój okręt podwodny stoi w (3-5,6), więc poza obszarem. Nie mam też ładunków manewru, dlatego zostawiam bez reakcji.",
+   "raw": [
+    "0100-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 95,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 1
+   },
+   "comment": "Lotniskowiec stoi pionowo w kolumnach 2-3 i obejmuje wiersze 2-4. Pole (2,1) leży w dwóch z trzech możliwych ustawień. Nalot z r14 sugeruje, że wariant schodzący do wiersza 6 odpada.",
+   "raw": [
+    "0101-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 96,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 6
+   },
+   "comment": "Szukam ostatniego okrętu podwodnego w nieostrzelanym centrum planszy.",
+   "raw": [
+    "0102-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 97,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 1
+   },
+   "comment": "Trafienie w (2,1) potwierdza, że lotniskowiec stoi pionowo w kolumnach 2-3 i obejmuje wiersze 1-4. Pole (3,1) musi więc być jego segmentem. Dobijam go zwykłym strzałem i zostawiam punkty na obronę.",
+   "raw": [
+    "0103-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 98,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 6
+   },
+   "comment": "Przeszukuję słabo sprawdzoną lewą część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0104-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 99,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 0
+   },
+   "comment": "Dobijam unieruchomiony lotniskowiec w kolumnach 2-3. Ma już 8 trafień w wierszach 1-4, więc brakuje rzędu 0 albo 5. Sprawdzam (2,0).",
+   "raw": [
+    "0105-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 100,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 7
+   },
+   "comment": "Sprawdzam środek planszy, szukając ostatniego okrętu podwodnego. Trafienie zatrzyma jego ruch.",
+   "raw": [
+    "0106-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 101,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "torpeda"
+   },
+   "comment": "Kupuję torpedę. Lotniskowiec stoi w x2-3, y1-5, a jego brakujące segmenty to (2,5) i (3,5). Pozioma torpeda od (2,5) trafi oba naraz i zatopi go w jednej turze.",
+   "raw": [
+    "0107-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 102,
+   "attempts": 1,
+   "action": {
+    "type": "torpeda",
+    "x": 2,
+    "y": 5,
+    "horiz": true
+   },
+   "comment": "Torpeda wzdłuż wiersza 5 od (2,5). Lotniskowiec wroga stoi unieruchomiony w x2-3, y1-5, a pole (2,0) to pudło. Brakują mu tylko (2,5) i (3,5), więc torpeda powinna trafić oba pola naraz i go zatopić.",
+   "raw": [
+    "0108-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "reaction",
+   "revision": 103,
+   "attempts": 1,
+   "action": {
+    "reaction": null
+   },
+   "comment": "Brak dostępnej obrony przed torpedą.",
+   "raw": [
+    "0109-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 104,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 10
+   },
+   "comment": "Przeszukuję słabo ostrzelany lewy dolny sektor. Jedno trafienie unieruchomi ostatni okręt i da punkt.",
+   "raw": [
+    "0110-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 105,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 7
+   },
+   "comment": "Lotniskowiec zatopiony! Wrogowi został tylko niszczyciel 3x1. Zaczynam przeszukiwać duży niezbadany obszar po prawej stronie planszy.",
+   "raw": [
+    "0111-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 106,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 4
+   },
+   "comment": "Przeszukuję słabo ostrzelany prawy górny sektor, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0112-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 107,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 12
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w lewy dolny róg, czyli duży obszar, w który jeszcze nie strzelałem.",
+   "raw": [
+    "0113-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 108,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 11
+   },
+   "comment": "Sprawdzam dolną część planszy. Okręt podwodny mógł tu dopłynąć od ostatniego nalotu.",
+   "raw": [
+    "0114-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 109,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 5
+   },
+   "comment": "Polowanie na ostatni niszczyciel wroga. Strzelam w prawy pas x12-13, którego jeszcze nie zbadałem.",
+   "raw": [
+    "0115-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 110,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 4
+   },
+   "comment": "Przeszukuję słabo ostrzelaną lewą część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0116-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 111,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 12
+   },
+   "comment": "Szukam ostatniego niszczyciela przeciwnika. Prawy dół planszy (y12-13) jest jeszcze nieostrzelany, więc strzelam w (10,12).",
+   "raw": [
+    "0117-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 112,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 6
+   },
+   "comment": "Przeszukuję prawą część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0118-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 113,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 8
+   },
+   "comment": "Przeciwnikowi został jeden niszczyciel 3x1. Przeczesuję duży niezbadany obszar po prawej stronie, między x9-13 a y5-10, strzałami co kilka pól.",
+   "raw": [
+    "0119-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 114,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 12
+   },
+   "comment": "Przeszukuję słabo ostrzelaną dolną część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0120-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 115,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 1
+   },
+   "comment": "Szukam ostatniego niszczyciela w dużym nieostrzelanym pasie u góry po prawej (x4-13, y0-1). Strzelam w jego środek, (8,1).",
+   "raw": [
+    "0121-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 116,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 8
+   },
+   "comment": "Przeszukuję słabo ostrzelany lewy sektor, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0122-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 117,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 0
+   },
+   "comment": "Przeciwnikowi został jeden niszczyciel 3×1. Przeczesuję systematycznie nieostrzelany górny pas planszy, zaczynając od prawej strony.",
+   "raw": [
+    "0123-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 118,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 9
+   },
+   "comment": "Sprawdzam środek nieostrzelanego obszaru, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0124-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 119,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 0
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Zgodnie z planem przeczesuję górny pas planszy, gdzie zostało sporo nieostrzelanych pól.",
+   "raw": [
+    "0125-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 120,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 10
+   },
+   "comment": "Sprawdzam otwarty obszar na dole planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0126-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 121,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 1
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Systematycznie przeczesuję niezbadane rejony, teraz górny prawy pas.",
+   "raw": [
+    "0127-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 122,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 7
+   },
+   "comment": "Przeszukuję lewą część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0128-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 123,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 13
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Sprawdzam dolny wiersz, który jest jeszcze nieostrzelany. Nie mam ładunków, więc zostaje mi zwykły strzał.",
+   "raw": [
+    "0129-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 124,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 11
+   },
+   "comment": "Przeszukuję dolną prawą część planszy, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0130-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 125,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 13
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga i ostrzeliwuję nieprzeszukane rejony planszy, tym razem dolną krawędź.",
+   "raw": [
+    "0131-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 126,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 2
+   },
+   "comment": "Szukam ostatniego okrętu podwodnego w słabo sprawdzonej prawej górnej części planszy.",
+   "raw": [
+    "0132-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 127,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 12
+   },
+   "comment": "Polowanie na ostatni niszczyciel. Przeczesuję prawy dolny róg (13,12), którego jeszcze nie sprawdzałem. Potem przejdę do prawej kolumny i środka.",
+   "raw": [
+    "0133-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 128,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 4
+   },
+   "comment": "Sprawdzam środkowy, słabo ostrzelany obszar, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0134-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 129,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 6
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w (10,6), w nieprzeszukany pas po prawej stronie środka planszy, gdzie okręt mógł patrolować.",
+   "raw": [
+    "0135-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 130,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 12
+   },
+   "comment": "Przeszukuję dolny pas planszy, gdzie podwodny nadal ma dużo miejsca do patrolowania.",
+   "raw": [
+    "0136-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 131,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 10
+   },
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w prawą krawędź (13,10), w nieostrzelany rejon na wschodzie.",
+   "raw": [
+    "0137-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 132,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 5
+   },
+   "comment": "Sprawdzam środek otwartego obszaru, gdzie może mieścić się podwodny długości 3.",
+   "raw": [
+    "0138-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 133,
+   "attempts": 1,
+   "action": {
+    "type": "buy",
+    "ability": "kontrwywiad"
+   },
+   "comment": "Kupuję kontrwywiad za ostatni punkt. Jeśli wróg użyje zwiadu na mój ostatni okręt, podwodny pozostanie ukryty. Zakup nie kończy tury, więc zaraz strzelam.",
+   "raw": [
+    "0139-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 134,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 8
+   },
+   "comment": "Polujemy na ostatni niszczyciel wroga. Strzelam w (9,8), wolne pole między pudłami w tym rejonie.",
+   "raw": [
+    "0140-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 135,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 7
+   },
+   "comment": "Sprawdzam prawy sektor: pole pasuje do kilku możliwych ustawień ostatniego okrętu podwodnego.",
+   "raw": [
+    "0141-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 136,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 6
+   },
+   "comment": "Szukam ostatniego niszczyciela przeciwnika. Strzelam w (13,6), nieostrzelany prawy skraj, gdzie zostało sporo wolnego miejsca dla okrętu 3×1.",
+   "raw": [
+    "0142-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 137,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 8
+   },
+   "comment": "Szukam ostatniego okrętu podwodnego na przecięciu możliwych ustawień długości 3.",
+   "raw": [
+    "0143-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 138,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 8
+   },
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w (10,8), zgodnie z planem przeszukiwania prawej strony planszy.",
+   "raw": [
+    "0144-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 139,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 5
+   },
+   "comment": "Przeszukuję lewą część planszy, gdzie pozostało wiele możliwych ustawień trzysegmentowego okrętu podwodnego.",
+   "raw": [
+    "0145-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 140,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 9
+   },
+   "comment": "Szukam ostatniego niszczyciela 3x1. Strzelam w środek dużego nieostrzelanego obszaru na dole planszy (x4-9, y8-12), gdzie zmieści się patrolujący okręt.",
+   "raw": [
+    "0146-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 141,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 11
+   },
+   "comment": "Przeszukuję słabo ostrzelany lewy dolny sektor, gdzie może patrolować ostatni okręt podwodny.",
+   "raw": [
+    "0147-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 142,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 11
+   },
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w (4,11), w mało sprawdzony rejon na dole po lewej.",
+   "raw": [
+    "0148-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 143,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 3
+   },
+   "comment": "Sprawdzam słabo ostrzelany prawy sektor, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0149-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 144,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 10
+   },
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w (8,10), środek niezbadanej kieszeni między pudłami w prawej dolnej części planszy.",
+   "raw": [
+    "0150-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 145,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 12
+   },
+   "comment": "Sprawdzam słabo ostrzelany prawy dolny sektor, gdzie może patrolować ostatni okręt podwodny.",
+   "raw": [
+    "0151-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 146,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 4
+   },
+   "comment": "Wrogowi został tylko niszczyciel 3x1. Strzelam w (6,4), pole z listy celów: to luka w środku planszy między pudłami.",
+   "raw": [
+    "0152-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 147,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 5
+   },
+   "comment": "Sprawdzam lukę między ostrzelanymi polami, szukając ostatniego okrętu podwodnego.",
+   "raw": [
+    "0153-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 148,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 2
+   },
+   "comment": "Szukam ostatniego niszczyciela 3x1. Strzelam w (5,2), duża niezbadana luka między zatopionym lotniskowcem a pancernikiem.",
+   "raw": [
+    "0154-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 149,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 12
+   },
+   "comment": "Sprawdzam dolny sektor, gdzie pozostało miejsce na trzypolowy okręt podwodny w obu orientacjach.",
+   "raw": [
+    "0155-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 150,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 7
+   },
+   "comment": "Szukam ostatniego niszczyciela 3x1 w dużym niezbadanym obszarze na lewo od środka (wiersze 6-9, kolumny 0-6). Pole (3,7) leży w jego środku, więc może trafić okręt ustawiony poziomo albo pionowo.",
+   "raw": [
+    "0156-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 151,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 11
+   },
+   "comment": "Sprawdzam lukę, w której podwodny może mieścić się zarówno pionowo, jak i poziomo.",
+   "raw": [
+    "0157-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 152,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 0,
+    "y": 8
+   },
+   "comment": "Przeciwnikowi został tylko niszczyciel 3×1. Sprawdzam lewą krawędź planszy (kolumny 0-1), bo prawie tam nie strzelałem.",
+   "raw": [
+    "0158-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 153,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 2
+   },
+   "comment": "Sprawdzam słabo ostrzelany lewy górny sektor, gdzie nadal może ukrywać się okręt podwodny.",
+   "raw": [
+    "0159-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 154,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 10
+   },
+   "comment": "Przeciwnikowi został tylko niszczyciel. Przeczesuję słabo zbadane kolumny 0-1 i strzelam w (1,10).",
+   "raw": [
+    "0160-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 155,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 10
+   },
+   "comment": "Sprawdzam lukę między ostrzelanymi polami, gdzie może mieścić się trzysegmentowy podwodny.",
+   "raw": [
+    "0161-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 156,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 7
+   },
+   "comment": "Szukam ostatniego niszczyciela na zachodniej flance. Kolumny 0–1 i wiersze 6–9 przy lewej krawędzi są prawie niezbadane, a niszczyciel patroluje blisko swojej pozycji startowej.",
+   "raw": [
+    "0162-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 157,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 9
+   },
+   "comment": "Sprawdzam lukę, w której może mieścić się ostatni okręt podwodny.",
+   "raw": [
+    "0163-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 158,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 8
+   },
+   "comment": "Strzelam w (5,8), środek dużego nieostrzelanego bloku x4-7, y7-10. W tym obszarze może patrolować ostatni niszczyciel przeciwnika.",
+   "raw": [
+    "0164-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 159,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 1
+   },
+   "comment": "Przeszukuję słabo ostrzelany prawy górny sektor, gdzie nadal mieści się podwodny długości 3.",
+   "raw": [
+    "0165-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 160,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 10
+   },
+   "comment": "Polowanie na ostatni niszczyciel 3x1. Przeczesuję słabo zbadany blok x4-7, y7-10.",
+   "raw": [
+    "0166-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 161,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 4
+   },
+   "comment": "Sprawdzam lukę, w której pozostały podwodny może mieścić się zarówno poziomo, jak i pionowo.",
+   "raw": [
+    "0167-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 162,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 8
+   },
+   "comment": "Szukam ostatniego niszczyciela w słabo zbadanym bloku x4-7, y7-10. Pole (4,8) przecina najwięcej możliwych ułożeń okrętu 3×1: dwa pionowe w kolumnie 4 i jedno poziome w wierszu 8.",
+   "raw": [
+    "0168-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 163,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 11
+   },
+   "comment": "Sprawdzam lukę, w której trzysegmentowy okręt może leżeć w obu osiach.",
+   "raw": [
+    "0169-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 164,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 9
+   },
+   "comment": "Przeciwnikowi został tylko niszczyciel 3x1. Przeczesuję środek planszy przy niedawnych pudłach, bo okręt na patrolu trzyma się blisko miejsca startu.",
+   "raw": [
+    "0170-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 165,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 10
+   },
+   "comment": "Sprawdzam prawą krawędź: to pole pasuje do kilku możliwych ustawień ostatniego okrętu.",
+   "raw": [
+    "0171-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 166,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 10
+   },
+   "comment": "Wrogowi został tylko niszczyciel 3x1. Strzelam w kolejne pole z listy celów, (5,10), żeby domknąć słabo zbadany obszar w centrum-dole.",
+   "raw": [
+    "0172-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 167,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 0,
+    "y": 6
+   },
+   "comment": "Sprawdzam lewą krawędź: to pole pasuje do kilku możliwych ustawień ostatniego okrętu podwodnego.",
+   "raw": [
+    "0173-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 168,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 10
+   },
+   "comment": "Dobijam niszczyciel trafiony w (5,10). Pola (6,10), (5,11) i (5,8) to pudła, więc okręt musi leżeć poziomo na (3..5,10). Strzelam w (4,10).",
+   "raw": [
+    "0174-g1.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 0,
+   "kind": "turn",
+   "revision": 169,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 4
+   },
+   "comment": "Sprawdzam środek długiego, nieostrzelanego pasa — może kryć ostatni okręt podwodny.",
+   "raw": [
+    "0175-g0.json"
+   ],
+   "outcome": "ok"
+  },
+  {
+   "player": 1,
+   "kind": "turn",
+   "revision": 170,
+   "attempts": 1,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 10
+   },
+   "comment": "Niszczyciel trafiony w (4,10) i (5,10) leży poziomo. Pole (6,10) to pudło, więc trzeci segment musi być na (3,10). Strzelam tam, żeby go zatopić.",
+   "raw": [
+    "0176-g1.json"
+   ],
+   "outcome": "ok"
+  }
+ ],
+ "raw": 176,
+ "effort": "medium",
+ "draw": "Gracz 0: codex, gracz 1: claude (moneta z crypto)."
+}

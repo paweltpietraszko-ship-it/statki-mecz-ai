@@ -1,0 +1,2702 @@
+{
+ "format": "statki-replay-1",
+ "matchId": "a406cc3a-eb75-4920-9424-020bcb23031f",
+ "settings": {
+  "mode": "standard",
+  "variant": "B",
+  "hard": false,
+  "scenario": "main",
+  "reports": true
+ },
+ "seed": "1d5815d3-b87c-4290-822d-b7d7d447c434",
+ "reactionWindowMs": 120000,
+ "actions": [
+  {
+   "revision": 1,
+   "action": {
+    "type": "setup",
+    "player": 0,
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "x": 1,
+      "y": 2,
+      "horiz": false
+     },
+     {
+      "id": "pancernik-1",
+      "x": 8,
+      "y": 1,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1
+      }
+     },
+     {
+      "id": "podwodny-1",
+      "x": 10,
+      "y": 9,
+      "horiz": false,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "niszczyciel-1",
+      "x": 3,
+      "y": 11,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "okret-1",
+      "x": 6,
+      "y": 5,
+      "horiz": false,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1
+      }
+     }
+    ],
+    "loadout": {
+     "sonar": 1,
+     "zwiad": 1,
+     "torpeda": 2,
+     "nalot": 1
+    }
+   },
+   "by": 0,
+   "at": "2026-10-15T13:29:47.727Z",
+   "comment": "Rozpraszam flotę, pozostawiając miejsce na patrol. Sonar i zwiad pomogą znaleźć cel dla dwóch torped."
+  },
+  {
+   "revision": 2,
+   "action": {
+    "type": "setup",
+    "player": 1,
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "x": 1,
+      "y": 1,
+      "horiz": true
+     },
+     {
+      "id": "pancernik-1",
+      "x": 9,
+      "y": 2,
+      "horiz": false,
+      "pattern": {
+       "kind": "skraj",
+       "along": 1,
+       "across": 1
+      }
+     },
+     {
+      "id": "podwodny-1",
+      "x": 2,
+      "y": 8,
+      "horiz": true,
+      "pattern": {
+       "kind": "zygzak",
+       "along": 1,
+       "across": 1
+      }
+     },
+     {
+      "id": "niszczyciel-1",
+      "x": 10,
+      "y": 10,
+      "horiz": true,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1
+      }
+     },
+     {
+      "id": "okret-1",
+      "x": 6,
+      "y": 10,
+      "horiz": false,
+      "pattern": {
+       "kind": "skraj",
+       "along": -1,
+       "across": -1
+      }
+     }
+    ],
+    "loadout": {
+     "salwa": 1,
+     "torpeda": 1,
+     "sonar": 1,
+     "manewr": 1,
+     "dym": 1
+    }
+   },
+   "by": 1,
+   "at": "2026-10-15T13:29:58.162Z",
+   "comment": "Rozpraszam flotę po całej planszy, żeby jeden sonar czy nalot nie odkrył kilku okrętów naraz. Każdy okręt patroluje innym wzorem. Zestaw: salwa, torpeda, sonar, manewr i dym."
+  },
+  {
+   "revision": 3,
+   "action": {
+    "type": "sonar",
+    "x": 4,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:30:09.816Z",
+   "comment": "Sprawdzam centralny obszar 5×5, szukając skupiska okrętów przed zwiadem i ostrzałem."
+  },
+  {
+   "revision": 4,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T13:32:09.826Z",
+   "comment": "Sonar obejmuje tylko mój okręt podwodny, a sonar i tak go nie widzi. Wynik będzie 0 bez żadnej reakcji, więc zostawiam dym na później."
+  },
+  {
+   "revision": 5,
+   "action": {
+    "type": "zwiad",
+    "x": 9,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:32:20.381Z",
+   "comment": "Sprawdzam prawą część planszy zwiadem, aby znaleźć cel do natychmiastowego trafienia."
+  },
+  {
+   "revision": 6,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": {
+     "type": "dym",
+     "shipId": "pancernik-1"
+    }
+   },
+   "by": 1,
+   "at": "2026-10-15T13:34:20.396Z",
+   "comment": "Zwiad wroga obejmuje 3 segmenty pancernika. Stawiam dym: zwiad nic nie znajdzie. Manewr zostawiam na salwę albo torpedę."
+  },
+  {
+   "revision": 7,
+   "action": {
+    "type": "nalot",
+    "x": 2,
+    "y": 8,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:34:31.643Z",
+   "comment": "Przeszukuję nalotem obszar poza pustymi strefami rozpoznania, aby znaleźć i unieruchomić pierwszy okręt."
+  },
+  {
+   "revision": 8,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": {
+     "type": "manewr",
+     "shipId": "podwodny-1",
+     "dx": 0,
+     "dy": -2
+    }
+   },
+   "by": 1,
+   "at": "2026-10-15T13:36:31.655Z",
+   "comment": "Nalot celuje w obszar z moim okrętem podwodnym, więc trafienie byłoby pewne. Manewruję o 2 pola w górę, na (3-5,6), poza obszar ataku. Ten rejon przeciwnik sprawdził już sonarem i dostał 0."
+  },
+  {
+   "revision": 9,
+   "action": {
+    "type": "sonar",
+    "x": 4,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:36:39.878Z",
+   "comment": "Zaczynam rozpoznanie od sonaru na środku planszy przeciwnika (x4-8, y4-8). Wynik pomoże wybrać cel pierwszego strzału."
+  },
+  {
+   "revision": 10,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T13:38:39.888Z",
+   "comment": "Brak dostępnej obrony przed sonarem; zachowuję pozostałe ładunki."
+  },
+  {
+   "revision": 11,
+   "action": {
+    "type": "torpeda",
+    "x": 4,
+    "y": 6,
+    "horiz": true,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:38:53.873Z",
+   "comment": "Sonar wykrył 3 segmenty w obszarze x4-8, y4-8. Puszczam torpedę środkowym wierszem tego obszaru (y6, x4-8). Pokrywa 5 pól, a jeśli trafi okręt, uderza we wszystkie jego segmenty na linii."
+  },
+  {
+   "revision": 12,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T13:40:53.892Z",
+   "comment": "Brak dostępnej obrony przed torpedą; zachowuję pozostałe ładunki."
+  },
+  {
+   "revision": 13,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 8,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:41:05.264Z",
+   "comment": "Sprawdzam prawy dolny sektor sonarem, by lepiej wycelować pozostałe torpedy."
+  },
+  {
+   "revision": 14,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T13:43:05.269Z",
+   "comment": "Nie mam już ładunków reakcji (dym i manewr zużyte), więc sonar przeciwnika przechodzi bez obrony. Wykryje mój niszczyciel w tym obszarze."
+  },
+  {
+   "revision": 15,
+   "action": {
+    "type": "torpeda",
+    "x": 8,
+    "y": 10,
+    "horiz": true,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:43:16.025Z",
+   "comment": "Sonar wykrył trzy segmenty w prawym dolnym sektorze. Torpeda przez środek obszaru może trafić i unieruchomić okręt, a przy dobrym ustawieniu zatopić go od razu."
+  },
+  {
+   "revision": 16,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T13:45:16.038Z",
+   "comment": "Nie mam reakcji. Na linii (8..12,10) nie stoi żaden mój okręt, więc torpeda powinna przejść pusto."
+  },
+  {
+   "revision": 17,
+   "action": {
+    "type": "salwa",
+    "x": 7,
+    "y": 6,
+    "omit": "tl",
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:45:27.252Z",
+   "comment": "Salwa wokół trafienia (7,6): strzelam w (8,6), (7,7) i (8,7). Sprawdzam jednocześnie przedłużenie w prawo i w dół, bo pole na lewo od trafienia to pudło."
+  },
+  {
+   "revision": 18,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T13:47:27.258Z",
+   "comment": "Brak dostępnej obrony; zachowuję pozostałą torpedę."
+  },
+  {
+   "revision": 19,
+   "action": {
+    "type": "torpeda",
+    "x": 10,
+    "y": 8,
+    "horiz": false,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:47:39.866Z",
+   "comment": "Pionowa torpeda przeczesze obszar ostatniego dodatniego sonaru i może trafić kilka segmentów naraz."
+  },
+  {
+   "revision": 20,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T13:49:39.875Z",
+   "comment": "Nie mam żadnej reakcji. Torpeda w kolumnie x10 trafi zapewne niszczyciel w (10,9), stracę jeden segment."
+  },
+  {
+   "revision": 21,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:49:49.378Z",
+   "comment": "Dobijam okręt stojący pionowo w kolumnie 7. Pudła po bokach wykluczają lotniskowiec, więc to okręt o szerokości 1. Strzelam w dół, w (7,8)."
+  },
+  {
+   "revision": 22,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:50:01.295Z",
+   "comment": "Sprawdzam pole na lewo od trafienia; pojedyncze trafienie pionową torpedą sugeruje poziomy okręt."
+  },
+  {
+   "revision": 23,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 5,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:50:09.939Z",
+   "comment": "Dobijam okręt w kolumnie 7: trafienia (7,6) i (7,7), a pod nimi pudło (7,8). Kadłub musi więc ciągnąć się w górę, więc strzelam w (7,5)."
+  },
+  {
+   "revision": 24,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:50:18.059Z",
+   "comment": "Sprawdzam prawą stronę trafionego okrętu; lewy sąsiad i pole powyżej są puste."
+  },
+  {
+   "revision": 25,
+   "action": {
+    "type": "sonar",
+    "x": 9,
+    "y": 9,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:50:32.988Z",
+   "comment": "Okret-1 wroga zatopiony. Zostały lotniskowiec, pancernik, podwodny i niszczyciel, o których nic nie wiem. Ostatnim ładunkiem sonaru sprawdzam nieznany prawy dolny róg."
+  },
+  {
+   "revision": 26,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T13:52:32.991Z",
+   "comment": "Bez reakcji. Okręt podwodny jest niewidoczny dla sonaru."
+  },
+  {
+   "revision": 27,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:52:53.919Z",
+   "comment": "Sonar w prawym dolnym rogu nic nie pokazał, więc przenoszę ostrzał na górny środek planszy. Szukam tam dużego lotniskowca."
+  },
+  {
+   "revision": 28,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:53:03.561Z",
+   "comment": "Przedłużam linię dwóch trafień w prawo, by zatopić lub rozpoznać unieruchomiony okręt."
+  },
+  {
+   "revision": 29,
+   "action": {
+    "type": "buy",
+    "ability": "nalot",
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:53:16.998Z",
+   "comment": "Mój niszczyciel zatonął, więc sonaru nie kupię. Za punkt biorę nalot: obszar 3×3 da znacznie większą szansę trafienia niż pojedynczy strzał na ślepo."
+  },
+  {
+   "revision": 30,
+   "action": {
+    "type": "nalot",
+    "x": 10,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:53:27.025Z",
+   "comment": "Używam nalotu na nieostrzelany obszar 3×3 od (10,2). Prawy górny rejon jest jeszcze nieznany, a jeśli trafię, okręt stanie w miejscu i będę go dobijał."
+  },
+  {
+   "revision": 31,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T13:55:27.036Z",
+   "comment": "Brak dostępnej obrony przed nalotem na pancernik."
+  },
+  {
+   "revision": 32,
+   "action": {
+    "type": "buy",
+    "ability": "sonar",
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:55:38.528Z",
+   "comment": "Kupuję dwa ładunki sonaru za punkt. Pomogą znaleźć kolejny cel bez strzelania na ślepo."
+  },
+  {
+   "revision": 33,
+   "action": {
+    "type": "sonar",
+    "x": 1,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:55:47.260Z",
+   "comment": "Przeszukuję sonarami północno-zachodni obszar, szukając przede wszystkim dużego lotniskowca."
+  },
+  {
+   "revision": 34,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T13:57:47.276Z",
+   "comment": "Nie mam żadnych ładunków obronnych, więc sonar przeciwnika przechodzi bez reakcji. Zobaczy fragment mojego lotniskowca w lewym górnym rejonie."
+  },
+  {
+   "revision": 35,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:57:57.816Z",
+   "comment": "Sonar wykrył 4 segmenty w obszarze (1–5,1–5). Strzelam w środek, by trafić i unieruchomić okręt."
+  },
+  {
+   "revision": 36,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:58:12.903Z",
+   "comment": "Dobijam okręt trafiony w (11,3). Jest unieruchomiony, więc sprawdzam sąsiednie pola. Zaczynam od (11,4)."
+  },
+  {
+   "revision": 37,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:58:26.640Z",
+   "comment": "Szukam okrętu w obszarze, gdzie ostatni sonar wykrył cztery segmenty. Omijam wcześniejsze pudło."
+  },
+  {
+   "revision": 38,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:58:33.818Z",
+   "comment": "Dobijam trafiony okręt w (11,3): w dół było pudło, więc teraz sprawdzam pole nad trafieniem."
+  },
+  {
+   "revision": 39,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:58:44.737Z",
+   "comment": "Sprawdzam pole obok trafienia (4,2), by ustalić kierunek unieruchomionego okrętu."
+  },
+  {
+   "revision": 40,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:58:54.838Z",
+   "comment": "Pudła w (11,2) i (11,4) wokół trafienia (11,3), więc okręt leży poziomo w wierszu 3. To nie lotniskowiec, bo 5×2 zająłby jedno z tych pól. Dobijam w lewo: (10,3)."
+  },
+  {
+   "revision": 41,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:59:04.593Z",
+   "comment": "Kontynuuję ostrzał wzdłuż dwóch trafionych segmentów, aby ustalić długość i zatopić okręt."
+  },
+  {
+   "revision": 42,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:59:14.666Z",
+   "comment": "Dobijam trafiony okręt w wierszu 3. Pudła nad i pod (11,3) wykluczają lotniskowiec, więc to okręt poziomy o długości 3–4. Teraz strzelam w lewo, w (9,3)."
+  },
+  {
+   "revision": 43,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:59:24.910Z",
+   "comment": "Kontynuuję ostrzał wzdłuż trzech trafień, szukając końca okrętu."
+  },
+  {
+   "revision": 44,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T13:59:43.219Z",
+   "comment": "Trafiłem (9,3), (10,3) i (11,3), a okręt wciąż pływa, więc ma 4 pola. Brakuje jednego segmentu: na (8,3) albo na (12,3). Strzelam w (8,3)."
+  },
+  {
+   "revision": 45,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T13:59:55.464Z",
+   "comment": "Cztery trafienia bez zatopienia sugerują lotniskowiec. Sprawdzam jego drugi rząd."
+  },
+  {
+   "revision": 46,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 9,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:00:05.795Z",
+   "comment": "Pancernik i okret-1 wroga zatopione. Zostały lotniskowiec, podwodny i niszczyciel. Przeczesuję szachownicą duży, nieostrzelany lewy-dolny obszar."
+  },
+  {
+   "revision": 47,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:00:15.068Z",
+   "comment": "Sprawdzam drugi rząd domniemanego lotniskowca nad pasmem czterech trafień."
+  },
+  {
+   "revision": 48,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:00:24.112Z",
+   "comment": "Kontynuuję przeszukiwanie lewego dołu planszy szachownicą. Lotniskowiec przeciwnika zajmuje 10 pól, więc w tym dużym nieodkrytym obszarze szansa trafienia jest spora."
+  },
+  {
+   "revision": 49,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:00:35.521Z",
+   "comment": "Sprawdzam górny rząd prawdopodobnego lotniskowca i kontynuuję dobijanie unieruchomionego celu."
+  },
+  {
+   "revision": 50,
+   "action": {
+    "type": "buy",
+    "ability": "nalot",
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:00:49.063Z",
+   "comment": "Kupuję nalot za jedyny punkt, póki mój lotniskowiec jeszcze żyje. Nalot w obszarze 3×3 ma dużo większą szansę na trafienie niż pojedynczy strzał."
+  },
+  {
+   "revision": 51,
+   "action": {
+    "type": "nalot",
+    "x": 0,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:01:00.926Z",
+   "comment": "Zużywam nalot, póki mój lotniskowiec jeszcze żyje. Celuję w nieostrzelany lewy bok (x0-2, y4-6), gdzie może pływać wrogi lotniskowiec 5×2."
+  },
+  {
+   "revision": 52,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T14:03:00.928Z",
+   "comment": "Nalot omija nasze okręty; bez reakcji."
+  },
+  {
+   "revision": 53,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:03:14.210Z",
+   "comment": "Sprawdzam pole nad trafieniem (4,2), aby potwierdzić obrys możliwego lotniskowca."
+  },
+  {
+   "revision": 54,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 11,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:03:22.358Z",
+   "comment": "Bez ładunków strzelam szachownicą w lewy dół planszy. Ta część jest jeszcze nieostrzelana, a przeciwnikowi zostały lotniskowiec 5×2, podwodny i niszczyciel."
+  },
+  {
+   "revision": 55,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:03:32.124Z",
+   "comment": "Sprawdzam (7,1), domykając prostokąt trafień i ustalając kształt unieruchomionych okrętów."
+  },
+  {
+   "revision": 56,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 11,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:03:41.976Z",
+   "comment": "Strzelam w duży, nieostrzelany obszar w prawym dolnym rogu. Lotniskowiec 5×2 łatwo tam namierzyć siatką co drugie pole."
+  },
+  {
+   "revision": 57,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:03:55.618Z",
+   "comment": "Sprawdzam prawy koniec trafionego prostokąta — możliwy ostatni słupek lotniskowca."
+  },
+  {
+   "revision": 58,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 11,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:04:11.581Z",
+   "comment": "Dobijam okręt trafiony w (10,11). Trafiony okręt stoi w miejscu, więc sprawdzam sąsiednie pola, zaczynając od (11,11)."
+  },
+  {
+   "revision": 59,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:04:20.518Z",
+   "comment": "Sprawdzam lewy koniec trafionego prostokąta; pudło po prawej wskazuje na lotniskowiec rozciągnięty w lewo."
+  },
+  {
+   "revision": 60,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 11,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:04:28.089Z",
+   "comment": "Dobijam okręt trafiony w (10,11). Pole (11,11) okazało się pudłem, więc sprawdzam lewego sąsiada (9,11)."
+  },
+  {
+   "revision": 61,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:04:36.962Z",
+   "comment": "Strzelam w ostatnie pole przypuszczalnego lotniskowca, aby go zatopić."
+  },
+  {
+   "revision": 62,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:04:45.346Z",
+   "comment": "Dobijam okręt trafiony w (10,11). Pola (9,11) i (11,11) to pudła, więc okręt leży pionowo. Sprawdzam pole nad trafieniem."
+  },
+  {
+   "revision": 63,
+   "action": {
+    "type": "sonar",
+    "x": 0,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:05:00.798Z",
+   "comment": "Sprawdzam lewą część planszy, szukając pancernika lub krążownika przed zakupem uzbrojenia."
+  },
+  {
+   "revision": 64,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:07:00.801Z",
+   "comment": "Nie mam żadnych ładunków reakcji, więc nie odpowiadam na sonar. Sonar nie widzi okrętu podwodnego, ale wykryje segment okret-1 na (4,8)."
+  },
+  {
+   "revision": 65,
+   "action": {
+    "type": "buy",
+    "ability": "zwiad",
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:07:21.190Z",
+   "comment": "Sonar wykrył jeden segment przy granicy obszaru. Kupuję zwiad, żeby ustalić jego pozycję przed atakiem."
+  },
+  {
+   "revision": 66,
+   "action": {
+    "type": "zwiad",
+    "x": 3,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:07:34.463Z",
+   "comment": "Sprawdzam granicę obszaru sonaru: pojedynczy segment sugeruje okręt wystający poza badany kwadrat."
+  },
+  {
+   "revision": 67,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:09:34.470Z",
+   "comment": "Nie mam ładunków reakcji, więc brak obrony. Zwiad na (3..5,3..5) i tak raczej nic nie znajdzie, bo mój podwodny stoi w wierszu y6, tuż pod obszarem."
+  },
+  {
+   "revision": 68,
+   "action": {
+    "type": "buy",
+    "ability": "nalot",
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:09:46.543Z",
+   "comment": "Kupuję nalot, by przeszukać granicę obszaru, w którym sonar wykrył segment."
+  },
+  {
+   "revision": 69,
+   "action": {
+    "type": "nalot",
+    "x": 3,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:09:55.721Z",
+   "comment": "Nalot przy granicy obszaru sonaru: próbuję trafić i unieruchomić wykryty okręt."
+  },
+  {
+   "revision": 70,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:11:55.728Z",
+   "comment": "Nie mam ładunków reakcji, więc nalot na (3-5,6-8) przyjmuję bez obrony. Zagrożone są podwodny na y6 i okret-1 w (4,8)."
+  },
+  {
+   "revision": 71,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 9,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:12:06.143Z",
+   "comment": "Dobijam okręt w kolumnie x=10. Trafienia (10,10) i (10,11), a pudła na (9,11) i (11,11) wykluczają lotniskowiec 5×2, więc to statek długości 3. Strzelam w (10,9), w razie pudła zostaje (10,12)."
+  },
+  {
+   "revision": 72,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 8,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:12:17.108Z",
+   "comment": "Sprawdzam pole na prawo od trafienia, aby ustalić kierunek unieruchomionego okrętu."
+  },
+  {
+   "revision": 73,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 12,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:12:37.775Z",
+   "comment": "Szukam lotniskowca 5x2 i niszczyciela 3x1. Strzelam w szeroki, nieostrzelany pas na dole planszy."
+  },
+  {
+   "revision": 74,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:12:45.474Z",
+   "comment": "Sprawdzam pole pod trafieniem (4,8), szukając pionowego okrętu."
+  },
+  {
+   "revision": 75,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:12:54.830Z",
+   "comment": "Zostały lotniskowiec 5×2 i niszczyciel. Strzelam w środek dużego nieostrzelanego obszaru w lewym górnym rogu. Tam lotniskowiec 5×2 ma najwięcej możliwych ustawień."
+  },
+  {
+   "revision": 76,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:13:01.701Z",
+   "comment": "Kontynuuję ostrzał wzdłuż dwóch trafień, próbując zatopić unieruchomiony okręt."
+  },
+  {
+   "revision": 77,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:13:14.414Z",
+   "comment": "Trafiliśmy w (3,2) i ten okręt stoi teraz w miejscu. Dobijam go od sąsiednich pól. Najpierw strzelam w prawo, w (4,2), bo duży lotniskowiec 5×2 jest tu bardziej prawdopodobny."
+  },
+  {
+   "revision": 78,
+   "action": {
+    "type": "buy",
+    "ability": "sonar",
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:13:24.139Z",
+   "comment": "Kupuję dwa ładunki sonaru, by odnaleźć pozostały pancernik. Okręt podwodny jest niewidoczny dla sonaru."
+  },
+  {
+   "revision": 79,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:13:32.067Z",
+   "comment": "Sprawdzam prawą środkową część planszy, szukając pozostałego pancernika."
+  },
+  {
+   "revision": 80,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:15:32.074Z",
+   "comment": "Nie mam ładunków obronnych, więc brak reakcji. Sonar przeciwnika obejmuje mój pancernik."
+  },
+  {
+   "revision": 81,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:15:46.291Z",
+   "comment": "Sonar wykrył trzy segmenty pancernika. Strzelam w środek obszaru, gdzie przecinają się najbardziej prawdopodobne ustawienia."
+  },
+  {
+   "revision": 82,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:15:59.693Z",
+   "comment": "Dobijam okręt trafiony w (3,2). Pudło w (4,2) wyklucza poziomy lotniskowiec. Jeśli to lotniskowiec, stoi pionowo w kolumnach 2-3, więc (2,2) na pewno jest trafieniem. Pasuje też do poziomego niszczyciela x1-3."
+  },
+  {
+   "revision": 83,
+   "action": {
+    "type": "sonar",
+    "x": 8,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:16:11.457Z",
+   "comment": "Sprawdzam dolną część rejonu ostatniego kontaktu, aby zawęzić pozycję pancernika przed strzałem."
+  },
+  {
+   "revision": 84,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:18:11.458Z",
+   "comment": "Nie mam ładunków obronnych, jedyna możliwa reakcja to brak reakcji. Sonar przeciwnika złapie fragment mojego pancernika w kolumnie 9."
+  },
+  {
+   "revision": 85,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:18:30.532Z",
+   "comment": "Strzelam w przecięcie najbardziej prawdopodobnych pozycji pancernika po obu sonarach."
+  },
+  {
+   "revision": 86,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:18:44.867Z",
+   "comment": "Dobijam okręt trafiony w (2,2) i (3,2). Pionowy lotniskowiec w kolumnach 2-3 zawsze obejmuje wiersz 3, więc (2,3) to najpewniejsze pole."
+  },
+  {
+   "revision": 87,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:19:00.080Z",
+   "comment": "Sprawdzam pole nad trafieniem, aby ustalić kierunek unieruchomionego okrętu."
+  },
+  {
+   "revision": 88,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 3,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:19:15.740Z",
+   "comment": "Trafienia (2,2), (3,2) i (2,3) tworzą literę L. Najpewniej to lotniskowiec ustawiony pionowo w kolumnach 2-3, więc dobijam pole (3,3) w środku tego układu."
+  },
+  {
+   "revision": 89,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:19:26.973Z",
+   "comment": "Dwa trafienia wyznaczają pionowy okręt. Sprawdzam przedłużenie na północ, zgodnie ze wskazaniami sonaru."
+  },
+  {
+   "revision": 90,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:19:40.141Z",
+   "comment": "Kwadrat 2×2 trafień w (2-3,2-3) wskazuje na pionowy lotniskowiec w kolumnach 2-3. Pudło w (4,2) wyklucza wariant poziomy, więc szukam jego końca: strzelam w (2,4)."
+  },
+  {
+   "revision": 91,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:19:47.447Z",
+   "comment": "Sprawdzam północny koniec trafionego okrętu; sonary wskazują na pancernik."
+  },
+  {
+   "revision": 92,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:19:59.992Z",
+   "comment": "Trafienie w (2,4) potwierdza pionowy lotniskowiec w kolumnach 2-3. Pole (3,4) należy do niego w każdym możliwym ułożeniu, więc to pewny strzał."
+  },
+  {
+   "revision": 93,
+   "action": {
+    "type": "buy",
+    "ability": "nalot",
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:20:10.713Z",
+   "comment": "Kupuję nalot: przeciw ostatniemu, niewidocznemu dla sonaru okrętowi podwodnemu przeszuka jednocześnie dziewięć pól."
+  },
+  {
+   "revision": 94,
+   "action": {
+    "type": "nalot",
+    "x": 6,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:20:18.583Z",
+   "comment": "Przeszukuję nalotem nieostrzelany obszar, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 95,
+   "action": {
+    "type": "react",
+    "player": 1,
+    "reaction": null
+   },
+   "by": 1,
+   "at": "2026-10-15T14:22:18.596Z",
+   "comment": "Nalot spada na (6-8, 10-12), a mój okręt podwodny stoi w (3-5,6), więc poza obszarem. Nie mam też ładunków manewru, dlatego zostawiam bez reakcji."
+  },
+  {
+   "revision": 96,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 1,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:22:32.044Z",
+   "comment": "Lotniskowiec stoi pionowo w kolumnach 2-3 i obejmuje wiersze 2-4. Pole (2,1) leży w dwóch z trzech możliwych ustawień. Nalot z r14 sugeruje, że wariant schodzący do wiersza 6 odpada."
+  },
+  {
+   "revision": 97,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:22:40.802Z",
+   "comment": "Szukam ostatniego okrętu podwodnego w nieostrzelanym centrum planszy."
+  },
+  {
+   "revision": 98,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 1,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:22:55.303Z",
+   "comment": "Trafienie w (2,1) potwierdza, że lotniskowiec stoi pionowo w kolumnach 2-3 i obejmuje wiersze 1-4. Pole (3,1) musi więc być jego segmentem. Dobijam go zwykłym strzałem i zostawiam punkty na obronę."
+  },
+  {
+   "revision": 99,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:23:04.482Z",
+   "comment": "Przeszukuję słabo sprawdzoną lewą część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 100,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 0,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:23:20.517Z",
+   "comment": "Dobijam unieruchomiony lotniskowiec w kolumnach 2-3. Ma już 8 trafień w wierszach 1-4, więc brakuje rzędu 0 albo 5. Sprawdzam (2,0)."
+  },
+  {
+   "revision": 101,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 7,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:23:29.747Z",
+   "comment": "Sprawdzam środek planszy, szukając ostatniego okrętu podwodnego. Trafienie zatrzyma jego ruch."
+  },
+  {
+   "revision": 102,
+   "action": {
+    "type": "buy",
+    "ability": "torpeda",
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:23:43.876Z",
+   "comment": "Kupuję torpedę. Lotniskowiec stoi w x2-3, y1-5, a jego brakujące segmenty to (2,5) i (3,5). Pozioma torpeda od (2,5) trafi oba naraz i zatopi go w jednej turze."
+  },
+  {
+   "revision": 103,
+   "action": {
+    "type": "torpeda",
+    "x": 2,
+    "y": 5,
+    "horiz": true,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:23:55.154Z",
+   "comment": "Torpeda wzdłuż wiersza 5 od (2,5). Lotniskowiec wroga stoi unieruchomiony w x2-3, y1-5, a pole (2,0) to pudło. Brakują mu tylko (2,5) i (3,5), więc torpeda powinna trafić oba pola naraz i go zatopić."
+  },
+  {
+   "revision": 104,
+   "action": {
+    "type": "react",
+    "player": 0,
+    "reaction": null
+   },
+   "by": 0,
+   "at": "2026-10-15T14:25:55.168Z",
+   "comment": "Brak dostępnej obrony przed torpedą."
+  },
+  {
+   "revision": 105,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:26:05.466Z",
+   "comment": "Przeszukuję słabo ostrzelany lewy dolny sektor. Jedno trafienie unieruchomi ostatni okręt i da punkt."
+  },
+  {
+   "revision": 106,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 7,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:26:14.508Z",
+   "comment": "Lotniskowiec zatopiony! Wrogowi został tylko niszczyciel 3x1. Zaczynam przeszukiwać duży niezbadany obszar po prawej stronie planszy."
+  },
+  {
+   "revision": 107,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:26:24.458Z",
+   "comment": "Przeszukuję słabo ostrzelany prawy górny sektor, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 108,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 12,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:26:35.494Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w lewy dolny róg, czyli duży obszar, w który jeszcze nie strzelałem."
+  },
+  {
+   "revision": 109,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 11,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:26:48.833Z",
+   "comment": "Sprawdzam dolną część planszy. Okręt podwodny mógł tu dopłynąć od ostatniego nalotu."
+  },
+  {
+   "revision": 110,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 5,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:26:59.931Z",
+   "comment": "Polowanie na ostatni niszczyciel wroga. Strzelam w prawy pas x12-13, którego jeszcze nie zbadałem."
+  },
+  {
+   "revision": 111,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:27:09.457Z",
+   "comment": "Przeszukuję słabo ostrzelaną lewą część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 112,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 12,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:27:17.074Z",
+   "comment": "Szukam ostatniego niszczyciela przeciwnika. Prawy dół planszy (y12-13) jest jeszcze nieostrzelany, więc strzelam w (10,12)."
+  },
+  {
+   "revision": 113,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:27:27.671Z",
+   "comment": "Przeszukuję prawą część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 114,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:27:37.624Z",
+   "comment": "Przeciwnikowi został jeden niszczyciel 3x1. Przeczesuję duży niezbadany obszar po prawej stronie, między x9-13 a y5-10, strzałami co kilka pól."
+  },
+  {
+   "revision": 115,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 12,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:27:48.989Z",
+   "comment": "Przeszukuję słabo ostrzelaną dolną część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 116,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 1,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:28:03.417Z",
+   "comment": "Szukam ostatniego niszczyciela w dużym nieostrzelanym pasie u góry po prawej (x4-13, y0-1). Strzelam w jego środek, (8,1)."
+  },
+  {
+   "revision": 117,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 8,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:28:15.836Z",
+   "comment": "Przeszukuję słabo ostrzelany lewy sektor, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 118,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 0,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:28:24.081Z",
+   "comment": "Przeciwnikowi został jeden niszczyciel 3×1. Przeczesuję systematycznie nieostrzelany górny pas planszy, zaczynając od prawej strony."
+  },
+  {
+   "revision": 119,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:28:33.444Z",
+   "comment": "Sprawdzam środek nieostrzelanego obszaru, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 120,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 0,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:28:40.075Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Zgodnie z planem przeczesuję górny pas planszy, gdzie zostało sporo nieostrzelanych pól."
+  },
+  {
+   "revision": 121,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:28:49.976Z",
+   "comment": "Sprawdzam otwarty obszar na dole planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 122,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 1,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:28:56.818Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Systematycznie przeczesuję niezbadane rejony, teraz górny prawy pas."
+  },
+  {
+   "revision": 123,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 7,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:29:05.720Z",
+   "comment": "Przeszukuję lewą część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 124,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 13,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:29:13.216Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Sprawdzam dolny wiersz, który jest jeszcze nieostrzelany. Nie mam ładunków, więc zostaje mi zwykły strzał."
+  },
+  {
+   "revision": 125,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 11,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:29:22.031Z",
+   "comment": "Przeszukuję dolną prawą część planszy, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 126,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 13,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:29:28.832Z",
+   "comment": "Szukam ostatniego niszczyciela wroga i ostrzeliwuję nieprzeszukane rejony planszy, tym razem dolną krawędź."
+  },
+  {
+   "revision": 127,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:29:38.936Z",
+   "comment": "Szukam ostatniego okrętu podwodnego w słabo sprawdzonej prawej górnej części planszy."
+  },
+  {
+   "revision": 128,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 12,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:29:48.491Z",
+   "comment": "Polowanie na ostatni niszczyciel. Przeczesuję prawy dolny róg (13,12), którego jeszcze nie sprawdzałem. Potem przejdę do prawej kolumny i środka."
+  },
+  {
+   "revision": 129,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:29:57.763Z",
+   "comment": "Sprawdzam środkowy, słabo ostrzelany obszar, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 130,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 6,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:30:07.845Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w (10,6), w nieprzeszukany pas po prawej stronie środka planszy, gdzie okręt mógł patrolować."
+  },
+  {
+   "revision": 131,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 12,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:30:17.540Z",
+   "comment": "Przeszukuję dolny pas planszy, gdzie podwodny nadal ma dużo miejsca do patrolowania."
+  },
+  {
+   "revision": 132,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:30:24.201Z",
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w prawą krawędź (13,10), w nieostrzelany rejon na wschodzie."
+  },
+  {
+   "revision": 133,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:30:35.369Z",
+   "comment": "Sprawdzam środek otwartego obszaru, gdzie może mieścić się podwodny długości 3."
+  },
+  {
+   "revision": 134,
+   "action": {
+    "type": "buy",
+    "ability": "kontrwywiad",
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:30:46.591Z",
+   "comment": "Kupuję kontrwywiad za ostatni punkt. Jeśli wróg użyje zwiadu na mój ostatni okręt, podwodny pozostanie ukryty. Zakup nie kończy tury, więc zaraz strzelam."
+  },
+  {
+   "revision": 135,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:30:53.986Z",
+   "comment": "Polujemy na ostatni niszczyciel wroga. Strzelam w (9,8), wolne pole między pudłami w tym rejonie."
+  },
+  {
+   "revision": 136,
+   "action": {
+    "type": "attack",
+    "x": 11,
+    "y": 7,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:31:04.737Z",
+   "comment": "Sprawdzam prawy sektor: pole pasuje do kilku możliwych ustawień ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 137,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 6,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:31:11.737Z",
+   "comment": "Szukam ostatniego niszczyciela przeciwnika. Strzelam w (13,6), nieostrzelany prawy skraj, gdzie zostało sporo wolnego miejsca dla okrętu 3×1."
+  },
+  {
+   "revision": 138,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 8,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:31:21.845Z",
+   "comment": "Szukam ostatniego okrętu podwodnego na przecięciu możliwych ustawień długości 3."
+  },
+  {
+   "revision": 139,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:31:31.140Z",
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w (10,8), zgodnie z planem przeszukiwania prawej strony planszy."
+  },
+  {
+   "revision": 140,
+   "action": {
+    "type": "attack",
+    "x": 2,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:31:40.475Z",
+   "comment": "Przeszukuję lewą część planszy, gdzie pozostało wiele możliwych ustawień trzysegmentowego okrętu podwodnego."
+  },
+  {
+   "revision": 141,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 9,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:31:51.996Z",
+   "comment": "Szukam ostatniego niszczyciela 3x1. Strzelam w środek dużego nieostrzelanego obszaru na dole planszy (x4-9, y8-12), gdzie zmieści się patrolujący okręt."
+  },
+  {
+   "revision": 142,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 11,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:32:10.090Z",
+   "comment": "Przeszukuję słabo ostrzelany lewy dolny sektor, gdzie może patrolować ostatni okręt podwodny."
+  },
+  {
+   "revision": 143,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 11,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:32:18.329Z",
+   "comment": "Szukam ostatniego niszczyciela. Strzelam w (4,11), w mało sprawdzony rejon na dole po lewej."
+  },
+  {
+   "revision": 144,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 3,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:32:26.250Z",
+   "comment": "Sprawdzam słabo ostrzelany prawy sektor, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 145,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:32:38.214Z",
+   "comment": "Szukam ostatniego niszczyciela wroga. Strzelam w (8,10), środek niezbadanej kieszeni między pudłami w prawej dolnej części planszy."
+  },
+  {
+   "revision": 146,
+   "action": {
+    "type": "attack",
+    "x": 12,
+    "y": 12,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:32:47.009Z",
+   "comment": "Sprawdzam słabo ostrzelany prawy dolny sektor, gdzie może patrolować ostatni okręt podwodny."
+  },
+  {
+   "revision": 147,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 4,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:32:54.323Z",
+   "comment": "Wrogowi został tylko niszczyciel 3x1. Strzelam w (6,4), pole z listy celów: to luka w środku planszy między pudłami."
+  },
+  {
+   "revision": 148,
+   "action": {
+    "type": "attack",
+    "x": 7,
+    "y": 5,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:33:05.428Z",
+   "comment": "Sprawdzam lukę między ostrzelanymi polami, szukając ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 149,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 2,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:33:13.170Z",
+   "comment": "Szukam ostatniego niszczyciela 3x1. Strzelam w (5,2), duża niezbadana luka między zatopionym lotniskowcem a pancernikiem."
+  },
+  {
+   "revision": 150,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 12,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:33:25.645Z",
+   "comment": "Sprawdzam dolny sektor, gdzie pozostało miejsce na trzypolowy okręt podwodny w obu orientacjach."
+  },
+  {
+   "revision": 151,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 7,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:33:35.479Z",
+   "comment": "Szukam ostatniego niszczyciela 3x1 w dużym niezbadanym obszarze na lewo od środka (wiersze 6-9, kolumny 0-6). Pole (3,7) leży w jego środku, więc może trafić okręt ustawiony poziomo albo pionowo."
+  },
+  {
+   "revision": 152,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 11,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:33:52.647Z",
+   "comment": "Sprawdzam lukę, w której podwodny może mieścić się zarówno pionowo, jak i poziomo."
+  },
+  {
+   "revision": 153,
+   "action": {
+    "type": "attack",
+    "x": 0,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:33:59.839Z",
+   "comment": "Przeciwnikowi został tylko niszczyciel 3×1. Sprawdzam lewą krawędź planszy (kolumny 0-1), bo prawie tam nie strzelałem."
+  },
+  {
+   "revision": 154,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 2,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:34:09.742Z",
+   "comment": "Sprawdzam słabo ostrzelany lewy górny sektor, gdzie nadal może ukrywać się okręt podwodny."
+  },
+  {
+   "revision": 155,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:34:16.775Z",
+   "comment": "Przeciwnikowi został tylko niszczyciel. Przeczesuję słabo zbadane kolumny 0-1 i strzelam w (1,10)."
+  },
+  {
+   "revision": 156,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:34:26.670Z",
+   "comment": "Sprawdzam lukę między ostrzelanymi polami, gdzie może mieścić się trzysegmentowy podwodny."
+  },
+  {
+   "revision": 157,
+   "action": {
+    "type": "attack",
+    "x": 1,
+    "y": 7,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:34:37.563Z",
+   "comment": "Szukam ostatniego niszczyciela na zachodniej flance. Kolumny 0–1 i wiersze 6–9 przy lewej krawędzi są prawie niezbadane, a niszczyciel patroluje blisko swojej pozycji startowej."
+  },
+  {
+   "revision": 158,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 9,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:34:51.244Z",
+   "comment": "Sprawdzam lukę, w której może mieścić się ostatni okręt podwodny."
+  },
+  {
+   "revision": 159,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:35:02.260Z",
+   "comment": "Strzelam w (5,8), środek dużego nieostrzelanego bloku x4-7, y7-10. W tym obszarze może patrolować ostatni niszczyciel przeciwnika."
+  },
+  {
+   "revision": 160,
+   "action": {
+    "type": "attack",
+    "x": 10,
+    "y": 1,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:35:15.313Z",
+   "comment": "Przeszukuję słabo ostrzelany prawy górny sektor, gdzie nadal mieści się podwodny długości 3."
+  },
+  {
+   "revision": 161,
+   "action": {
+    "type": "attack",
+    "x": 6,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:35:22.303Z",
+   "comment": "Polowanie na ostatni niszczyciel 3x1. Przeczesuję słabo zbadany blok x4-7, y7-10."
+  },
+  {
+   "revision": 162,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:35:32.549Z",
+   "comment": "Sprawdzam lukę, w której pozostały podwodny może mieścić się zarówno poziomo, jak i pionowo."
+  },
+  {
+   "revision": 163,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 8,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:35:44.311Z",
+   "comment": "Szukam ostatniego niszczyciela w słabo zbadanym bloku x4-7, y7-10. Pole (4,8) przecina najwięcej możliwych ułożeń okrętu 3×1: dwa pionowe w kolumnie 4 i jedno poziome w wierszu 8."
+  },
+  {
+   "revision": 164,
+   "action": {
+    "type": "attack",
+    "x": 9,
+    "y": 11,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:36:00.859Z",
+   "comment": "Sprawdzam lukę, w której trzysegmentowy okręt może leżeć w obu osiach."
+  },
+  {
+   "revision": 165,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 9,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:36:08.082Z",
+   "comment": "Przeciwnikowi został tylko niszczyciel 3x1. Przeczesuję środek planszy przy niedawnych pudłach, bo okręt na patrolu trzyma się blisko miejsca startu."
+  },
+  {
+   "revision": 166,
+   "action": {
+    "type": "attack",
+    "x": 13,
+    "y": 10,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:36:33.257Z",
+   "comment": "Sprawdzam prawą krawędź: to pole pasuje do kilku możliwych ustawień ostatniego okrętu."
+  },
+  {
+   "revision": 167,
+   "action": {
+    "type": "attack",
+    "x": 5,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:36:41.550Z",
+   "comment": "Wrogowi został tylko niszczyciel 3x1. Strzelam w kolejne pole z listy celów, (5,10), żeby domknąć słabo zbadany obszar w centrum-dole."
+  },
+  {
+   "revision": 168,
+   "action": {
+    "type": "attack",
+    "x": 0,
+    "y": 6,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:36:57.808Z",
+   "comment": "Sprawdzam lewą krawędź: to pole pasuje do kilku możliwych ustawień ostatniego okrętu podwodnego."
+  },
+  {
+   "revision": 169,
+   "action": {
+    "type": "attack",
+    "x": 4,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:37:07.436Z",
+   "comment": "Dobijam niszczyciel trafiony w (5,10). Pola (6,10), (5,11) i (5,8) to pudła, więc okręt musi leżeć poziomo na (3..5,10). Strzelam w (4,10)."
+  },
+  {
+   "revision": 170,
+   "action": {
+    "type": "attack",
+    "x": 8,
+    "y": 4,
+    "player": 0
+   },
+   "by": 0,
+   "at": "2026-10-15T14:37:23.031Z",
+   "comment": "Sprawdzam środek długiego, nieostrzelanego pasa — może kryć ostatni okręt podwodny."
+  },
+  {
+   "revision": 171,
+   "action": {
+    "type": "attack",
+    "x": 3,
+    "y": 10,
+    "player": 1
+   },
+   "by": 1,
+   "at": "2026-10-15T14:37:29.824Z",
+   "comment": "Niszczyciel trafiony w (4,10) i (5,10) leży poziomo. Pole (6,10) to pudło, więc trzeci segment musi być na (3,10). Strzelam tam, żeby go zatopić."
+  }
+ ],
+ "pauses": [],
+ "summary": {
+  "settings": {
+   "mode": "standard",
+   "variant": "B",
+   "hard": false,
+   "scenario": "main",
+   "reports": true
+  },
+  "winner": 1,
+  "endReason": "fleet",
+  "rounds": 65,
+  "players": [
+   {
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "type": "lotniskowiec",
+      "length": 5,
+      "width": 2,
+      "x": 2,
+      "y": 1,
+      "horiz": false,
+      "hits": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": null,
+      "roam": [
+       -1,
+       0
+      ]
+     },
+     {
+      "id": "pancernik-1",
+      "type": "pancernik",
+      "length": 4,
+      "width": 1,
+      "x": 8,
+      "y": 3,
+      "horiz": true,
+      "hits": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1,
+       "steps": [
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         -1
+        ]
+       ],
+       "idx": 2,
+       "dir": 1
+      },
+      "roam": null
+     },
+     {
+      "id": "podwodny-1",
+      "type": "podwodny",
+      "length": 3,
+      "width": 1,
+      "x": 10,
+      "y": 9,
+      "horiz": false,
+      "hits": [
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1,
+       "steps": [
+        [
+         -1,
+         0
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "idx": 0,
+       "dir": 1
+      },
+      "roam": null
+     },
+     {
+      "id": "niszczyciel-1",
+      "type": "niszczyciel",
+      "length": 3,
+      "width": 1,
+      "x": 3,
+      "y": 10,
+      "horiz": true,
+      "hits": [
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1,
+       "steps": [
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "idx": 3,
+       "dir": -1
+      },
+      "roam": null
+     },
+     {
+      "id": "okret-1",
+      "type": "okret",
+      "length": 3,
+      "width": 1,
+      "x": 7,
+      "y": 5,
+      "horiz": false,
+      "hits": [
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "dryf",
+       "along": -1,
+       "across": 1,
+       "steps": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         -1,
+         0
+        ]
+       ],
+       "idx": 1,
+       "dir": 1
+      },
+      "roam": null
+     }
+    ],
+    "reactionsUsed": [],
+    "charges": {
+     "salwa": 0,
+     "torpeda": 0,
+     "zwiad": 0,
+     "naprawa": 0,
+     "manewr": 0,
+     "nalot": 0,
+     "dym": 0,
+     "kontrwywiad": 0,
+     "sonar": 0,
+     "kontrsonar": 0
+    },
+    "points": 0,
+    "hitsDealt": 20,
+    "hitCells": 23,
+    "reports": []
+   },
+   {
+    "ships": [
+     {
+      "id": "lotniskowiec-1",
+      "type": "lotniskowiec",
+      "length": 5,
+      "width": 2,
+      "x": 3,
+      "y": 1,
+      "horiz": true,
+      "hits": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": null,
+      "roam": [
+       -1,
+       0
+      ]
+     },
+     {
+      "id": "pancernik-1",
+      "type": "pancernik",
+      "length": 4,
+      "width": 1,
+      "x": 9,
+      "y": 3,
+      "horiz": false,
+      "hits": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "skraj",
+       "along": 1,
+       "across": 1,
+       "steps": [
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         -1,
+         0
+        ]
+       ],
+       "idx": 1,
+       "dir": 1
+      },
+      "roam": null
+     },
+     {
+      "id": "podwodny-1",
+      "type": "podwodny",
+      "length": 3,
+      "width": 1,
+      "x": 3,
+      "y": 7,
+      "horiz": true,
+      "hits": [
+       false,
+       false,
+       false
+      ],
+      "immobile": false,
+      "repaired": false,
+      "maneuvered": true,
+      "smoke": 0,
+      "pattern": {
+       "kind": "zygzak",
+       "along": 1,
+       "across": 1,
+       "steps": [
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         -1
+        ]
+       ],
+       "idx": 6,
+       "dir": -1
+      },
+      "roam": null
+     },
+     {
+      "id": "niszczyciel-1",
+      "type": "niszczyciel",
+      "length": 3,
+      "width": 1,
+      "x": 10,
+      "y": 9,
+      "horiz": true,
+      "hits": [
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "dryf",
+       "along": 1,
+       "across": -1,
+       "steps": [
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         1
+        ]
+       ],
+       "idx": 3,
+       "dir": 1
+      },
+      "roam": null
+     },
+     {
+      "id": "okret-1",
+      "type": "okret",
+      "length": 3,
+      "width": 1,
+      "x": 4,
+      "y": 8,
+      "horiz": false,
+      "hits": [
+       true,
+       true,
+       true
+      ],
+      "immobile": true,
+      "repaired": false,
+      "maneuvered": false,
+      "smoke": 0,
+      "pattern": {
+       "kind": "skraj",
+       "along": -1,
+       "across": -1,
+       "steps": [
+        [
+         0,
+         -1
+        ],
+        [
+         0,
+         -1
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         0,
+         1
+        ],
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0
+        ]
+       ],
+       "idx": 4,
+       "dir": 1
+      },
+      "roam": null
+     }
+    ],
+    "reactionsUsed": [
+     {
+      "round": 1,
+      "ability": "zwiad",
+      "type": "dym",
+      "shipId": "pancernik-1"
+     },
+     {
+      "round": 1,
+      "ability": "nalot",
+      "type": "manewr",
+      "shipId": "podwodny-1",
+      "dx": 0,
+      "dy": -2
+     }
+    ],
+    "charges": {
+     "salwa": 0,
+     "torpeda": 0,
+     "zwiad": 0,
+     "naprawa": 0,
+     "manewr": 0,
+     "nalot": 0,
+     "dym": 0,
+     "kontrwywiad": 1,
+     "sonar": 0,
+     "kontrsonar": 0
+    },
+    "points": 1,
+    "hitsDealt": 23,
+    "hitCells": 20,
+    "reports": []
+   }
+  ]
+ },
+ "notes": [
+  "R65 strzał (8,4), wynik oczekiwany. Pozostał podwodny długości 3; brak aktywnych trafień. (0,6) i (13,10) pudła. Nasz ostatni okręt ma tylko jeden nietrafiony segment (3,10); (4,10),(5,10) trafione. Brak ładunków i punktów, punkt po następnym trafieniu. Po trafieniu natychmiast sprawdzać orientację i dobijać. Sonar nie wykrywa podwodnego. Szukać ciągów 3 wolnych pól, także przy krawędziach.",
+  "r65: strzał w (3,10), żeby dobić niszczyciel (4,10)(5,10). (6,10) to pudło, pion odpada. Jeśli (3,10) okaże się pudłem, przeanalizować ponownie, np. czy okręt odpłynął. Mam kontrwywiad 1 i 1 punkt. Mój ostatni okręt to podwodny na (3-5,7)."
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "format": "statki-zobowiazanie-1",
+ "id": "65204d84-290c-4e2c-a97b-2eeffdfc9353",
+ "utworzono": "2026-10-15T13:24:49.078Z",
+ "ustawienia": {
+  "mode": "standard",
+  "variant": "B",
+  "hard": false,
+  "scenario": "main",
+  "reports": true
+ },
+ "oknoMs": 120000,
+ "ziarnoSha256": "e056160ccfe74ebc61fc908998c86cab11eb865c04f1916209456c194c96c1e7",
+ "gracze": {
+  "0": {
+   "rodzaj": "model",
+   "cli": "codex",
+   "wersjaCli": "codex-cli 0.162.1",
+   "effort": "medium"
+  },
+  "1": {
+   "rodzaj": "model",
+   "cli": "claude",
+   "wersjaCli": "2.1.300 (Claude Code)",
+   "effort": "medium"
+  }
+ },
+ "losowanie": "Gracz 0: codex, gracz 1: claude (moneta z crypto).",
+ "limity": {
+  "maxCalls": 300,
+  "maxMinutes": 240,
+  "stopAt": 0.8
+ },
+ "pliki": {
+  "game/src/engine/abilities.js": "6e08c1d6702d637b886e3396d28050cbba775c9cd31f6eabacf803c7543316e1",
+  "game/src/engine/data.js": "0dbcb35ed476d8ac78ea7aa84356349d7fc4b305f6440687f798266ff50908ad",
+  "game/src/engine/errors.js": "b1df6844df02d46a1a84a6981f12d7ed115edbda9c99513e417cfccf518e17bc",
+  "game/src/engine/fleet.js": "b7e70c455fa02cee83dcf8528adb34e30accc38aa33b8a56fc89dd8be1b2a368",
+  "game/src/engine/game.js": "f657a5354649b5dd4079d6e1acdf97f919c3a3c84849cdb3009d1356da2d4a81",
+  "game/src/engine/reports.js": "579c667d698c162ff8e186bf02fe5c00b998f9f6aa96e7e824b7b6424ff48be4",
+  "game/src/engine/rng.js": "d73fd74b5c2d01252edc058588d8a0791c4c94b7bda80d8bcffb9d2d21f254b8",
+  "game/src/engine/view.js": "a38c5673bfba760b1c37fb5ae5a33e059eb06a7763b2b6786f7070ed734ce9f0",
+  "game/mcp/present.js": "19a676d5c96a69fedeff8af488e3ed1e233b2f6cba7d9d82ab5bcfcca44ec5c0",
+  "game/mcp/odpowiedzi.js": "5eb9a3f42eed94a571ed7e1f8c9be3d4cd445960c50425da5308398dd5f43193",
+  "game/mcp/sprawdz.mjs": "955b5d9923731923b086c2d5af5f57366a165cb9c4a29047e59d5204c4e2deaa",
+  "game/mcp/ZASADY_DLA_MODELI.md": "93d24de0527548141a2b5edd09bd3cccd86d70413774f2920deb00326c75e1f5",
+  "game/mcp/README_PUBLICZNE.md": "bd5dce9d97a8334f9c14aeda63e0ba6fba2251b8ddf41ee9eb61cfa5a5e6cf0a"
+ },
+ "repoPrywatne": {
+  "commit": "c61fd648681f1488886b81d6d27b39aeaca2231c",
+  "czyste": true
+ }
+}
